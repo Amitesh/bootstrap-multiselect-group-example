@@ -1,3 +1,33 @@
-body {
-  background: orange;
+.multiselect-container .caret-container {
+  position: relative;
+}
+
+.multiselect-container .caret-container.open,
+.multiselect-container .caret-container.close {
+  background: initial;
+  float: none;
+  height: initial;
+  width: initial;
+  font-size: 0.8rem;
+  color: #212529;
+  opacity: 1;
+  text-shadow: none;
+  padding: 1px 4px;
+  cursor: pointer;
+}
+
+.multiselect-container .caret-container::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -4px;
+  -webkit-transform: translateY(-50%) rotate(0deg);
+  transform: translateY(-50%) rotate(0deg);
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.multiselect-container .caret-container.close::after {
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
 }
